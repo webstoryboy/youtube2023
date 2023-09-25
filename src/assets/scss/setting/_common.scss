@@ -1,0 +1,116 @@
+body {
+    color: #fff;
+    opacity: 1;
+}
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    border-right: 1px solid #161616;
+    height: 100%;
+    z-index: 10000;
+    background-color: #000;
+}
+
+#main {
+    max-width: 2000px;
+    min-height: 700px;
+    margin: 0 auto;
+    padding-left: 260px;
+}
+
+@media (max-width: 800px){
+    #header {
+        left: -260px;
+    }
+    #main {
+        padding-left: 0;
+    }
+}
+section.isLoading > div {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+section > div {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+section {
+    padding: 40px;
+
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+
+        em {
+            position: relative;
+           
+            &::after {
+                content: '';
+                width: 100%;
+                height: 50%;
+                background-color: rgba(255, 0, 0, 0.747);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    @media (max-width: 800px){
+        padding: 20px;
+    }
+    
+}
+
+.overflow {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.play__icon {
+    a {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        // padding-bottom: 56.25%;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #0000002e;
+            position: absolute;
+            left: 0; 
+            top: 0;
+            transition: background-color 0.3s;
+        }
+        &:hover::before {
+            background-color: #00000000;
+        }
+        &::after {
+            content: '';
+            width: 80px;
+            height: 80px;
+            background: #00000096 url(../../img/icon/play.svg) no-repeat center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+}

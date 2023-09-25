@@ -1,0 +1,43 @@
+.develpoer__inner {
+    display: flex;
+    color: #fff;
+    flex-wrap: wrap;
+
+    .develpoer {
+        color: #fff;
+        text-align: center;
+        // margin-right: 20px;
+
+        .develpoer__img {
+            display: block;
+            // width: 150px;
+            // height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .develpoer__info {
+            // width: 150px;
+            text-align: center;
+            @include line-one;
+            // padding-bottom: 40px;
+        }
+    }
+}
+
+#developerPage {
+    .develpoer__inner {
+        .develpoer {
+            margin-right: 20px;
+
+            .develpoer__img {
+                width: 150px;
+                height: 150px;
+            }
+            .develpoer__info {
+                width: 150px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+}

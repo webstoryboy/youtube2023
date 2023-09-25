@@ -1,0 +1,109 @@
+.header__logo {
+    text-align: center;
+    border-bottom: 1px solid #161616;
+    text-transform: uppercase;
+
+    a {
+        display: flex;
+        padding: 10px;
+        margin: 10px;
+
+        em {
+            width: 40px;
+            height: 40px;
+            display: block;
+            background-color: red;
+            margin-right: 10px;
+        }
+
+        span {
+            text-align: left;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 900;
+        }
+    }
+
+    @media (max-width: 800px){
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+}
+
+.header__cate {
+    padding: 10px 0;
+
+    ul {
+        margin-bottom: 10px;
+        
+        li {
+            a {
+                color: #ebebeb;
+                font-size: 1rem;
+                display: block;
+                position: relative;
+                padding: 0.9rem 2rem 0.9rem 50px;
+                line-height: 1;
+                margin: 0 0.625rem;
+                border-radius: 40px;
+                transition: background-color 0.3s;
+                
+                svg {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    position: absolute;
+                    left: 1.25rem;
+                    top: 0.75rem;
+                }
+                
+                &:hover {
+                    background-color: #202020;
+                    color: #fff;
+                }
+            }
+            
+            &.active a {
+                background-color: #202020;
+                color: #fff;
+            }
+        }
+    }
+    .keyword {
+        border-top: 1px solid #161616;
+        padding: 1.25rem;
+        
+        li {
+            display: inline-block;
+            
+            a {
+                display: inline-block;
+                padding: 7px 15px;
+                margin: 3px 1px;
+                border: 1px solid #202020;
+                border-radius: 40px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+.header__sns {
+    border-top: 1px solid #161616;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 15px 0 10px;
+    background-color: #ffffff0b;
+    backdrop-filter: blur(10px);
+
+    li {
+        display: inline-block;
+        
+        a {
+            padding: 5px 7px;
+            display: inline-block;
+        }
+    }
+}
